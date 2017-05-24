@@ -1,0 +1,16 @@
+I basicaddcommit.inc
+> find "Added eumaeus"
+${HASH}
+<<<*
+> find "A"
+Found no commit with that message.
+<<<
++ u.txt eumaeus.txt
+> add u.txt
+<<<
+> commit "Added eumaeus"
+<<<
+> find "Added eumaeus"
+${HASH}
+${HASH}
+<<<*

@@ -1,0 +1,27 @@
+# Tests that will merge commits (if possible).
+> init
+<<<
+D HASH "[a-f0-9]+"
++ e.txt eumaeus.txt ithaca.txt
+> add e.txt
+<<<
+> commit "Added eumaeus"
+<<<
+> add ithaca.txt
+<<<
+> commit "Added ithaca"
+<<<
+> rm e.txt
+<<<
+> commit "Removed eumaeus"
+<<<
+> branch "Greece"
+Switched to new branch "Greece".
+<<<
+> add eumaeus.txt
+<<<
+> commit "Added Eumaeus"
+<<<
+> merge Master
+Merged Greece with Master.
+<<<

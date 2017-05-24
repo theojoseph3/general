@@ -1,0 +1,22 @@
+# Tests reset and find/global-log's ability to find branches "floating around".
+I prelude1.inc
+I testfind.inc
+> find "initial commit"
+${HASH}
+<<<*
+> reset ${HASH1}
+<<<
++ water.txt water.txt
+> add water.txt
+<<<
+> commit "Why did Leo love water?"
+<<<
+> find "Added eumaeus"
+${HASH}
+${HASH}
+<<<*
+> global-log
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+<<<*

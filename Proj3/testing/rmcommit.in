@@ -1,0 +1,6 @@
+# Tests whether removing a file is grounds for a commit. 
+I basicaddcommit.inc
+> rm e.txt
+<<<
+> commit "Removed e"
+<<<
